@@ -4,12 +4,13 @@ import viteLogo from '/vite.svg'
 import Authentication from './components/Authentication'
 import './App.css'
 import New from './components/New'
+import BookGrid from './components/BookGrid'
 
 function App() {
 
   return (
     <>
-    <New></New>
+    <BookGrid></BookGrid>
     </>
   )
 }

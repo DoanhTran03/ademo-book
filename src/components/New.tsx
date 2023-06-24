@@ -11,7 +11,6 @@ const New = () => {
   const [bookURL, setBookURL] = useState("");
   const [perLoadImg, setPerLoadImg] = useState<number>();
   const file = files ? files[0] : null;
-  console.log(bookURL);
 
   useEffect(() => {
     const uploadFile = async () => {
