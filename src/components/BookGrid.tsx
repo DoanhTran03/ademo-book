@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { collection, getDocs } from "firebase/firestore";
+import {doc, deleteDoc, collection, getDocs } from "firebase/firestore";
 import { db } from "../config/firebase";
 
 const BookGrid = () => {
@@ -19,11 +17,24 @@ const BookGrid = () => {
     fetchBooks();
   }, []);
 
+  const handleDelete = async (id: string) => {
+    try{
+        await deleteDoc(doc(db, "books", id));
+        setBooks(books.filter(book => book.id !== id))
+    }
+    catch(err) {
+        console.log(err);
+    }
+  }
+
   console.log(books);
   return (
     <div>
       {books.map((book) => (
-        <p key={book.id}>{book.description}</p>
+        <>
+        <p key={book.id}>{book.title}</p> 
+        <button onClick={() => handleDelete(book.id)}>Delete</button>
+        </>
       ))}
     </div>
   );
