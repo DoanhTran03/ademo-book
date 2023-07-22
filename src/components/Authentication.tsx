@@ -1,49 +1,37 @@
-import { useState } from "react";
-import { auth } from "../config/firebase";
-import { UserCredential, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "firebase/auth";
+import { useRef, useState } from "react";
+import useAuth from "../hooks/useAuth";
 
 const Authentication = () => {
-  const [user, setUser] = useState<UserCredential>();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-
-  
-  const signUp = async () => {
-    await createUserWithEmailAndPassword(auth, email, password)
-    .then(userCredential => {
-      window.alert("User created successfully");
-      setUser(userCredential);
-    })
-    .catch(error => {window.alert(error.message)})
+  const { user, signIn, signUp, signOut } = useAuth();
+  const emailRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
+  const signUpHandle = () => {
+    if (emailRef.current && passwordRef.current) {
+      signUp(emailRef.current.value, passwordRef.current.value);
+      emailRef.current.value = "";
+      passwordRef.current.value = "";
+    }
   };
-
-  const signOut = async () => {
-
-  }
-
-  const signIn = async () => {
-  signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    setUser(userCredential);
-    // ...
-  })
-  .catch((error) => {
-    window.alert(error.message)
-  });
-  }
-
-  return <>
-  <p>Current User: {auth.currentUser?.email} <br /> Login Successfully!!!</p>
-  <label>Username</label>
-  <input type="email" placeholder="Email..." onChange={e => setEmail(e.target.value)}></input>
-  <label>Password</label>
-  <input type="password" placeholder="Password..." onChange={e => {setPassword(e.target.value)}}></input>
-  <button onClick={signUp}>Sign Up</button>
-  <button onClick={signIn}>Sign In</button>
-  <button >Sign Out</button>
-  </>;
+  const signInHandle = () => {
+    if (emailRef.current && passwordRef.current)
+      signIn(emailRef.current.value, passwordRef.current.value);
+  };
+  console.log(user?.user.email);
+  return (
+    <>
+      <label>Username</label>
+      <input ref={emailRef} type="email" placeholder="Email..."></input>
+      <label>Password</label>
+      <input
+        ref={passwordRef}
+        type="password"
+        placeholder="Password..."
+      ></input>
+      <button onClick={() => signUpHandle()}>Sign Up</button>
+      <button onClick={() => signInHandle()}>Sign In</button>
+      <button>Sign Out</button>
+    </>
+  );
 };
 
 export default Authentication;

@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {doc, deleteDoc, collection, getDocs } from "firebase/firestore";
 import { db } from "../config/firebase";
 
+interface Book {
+  id: string;
+}
+
 const BookGrid = () => {
-  let [books, setBooks] = useState([{}]);
+  let [books, setBooks] = useState<Book[]>([]);
 
   useEffect(() => {
     const fetchBooks = async () => {
-      let list: { id: string }[] = [];
+      let list: Book[] = [];
       const querySnapshot = await getDocs(collection(db, "books"));
       querySnapshot.forEach((doc) => {
         list.push({ id: doc.id, ...doc.data() });
