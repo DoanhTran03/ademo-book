@@ -4,14 +4,15 @@ import viteLogo from '/vite.svg'
 import Authentication from './components/Authentication'
 import './App.css'
 import New from './components/New'
-import BookGrid from './components/BookGrid'
+import { BrowserRouter } from 'react-router-dom'
+import Router from './pages/Router'
 
 function App() {
 
   return (
-    <>
-    <Authentication></Authentication>
-    </>
+    <BrowserRouter>
+      <Router/>
+    </BrowserRouter>
   )
 }
 
