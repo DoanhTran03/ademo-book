@@ -4,10 +4,9 @@ import { db } from "../config/firebase";
 
 interface Book {
   id: string;
-  title: string;
 }
 
-const BookGrid = () => {
+const useBook = () => {
   let [books, setBooks] = useState<Book[]>([]);
 
   useEffect(() => {
@@ -32,17 +31,6 @@ const BookGrid = () => {
     }
   }
 
-  console.log(books);
-  return (
-    <div>
-      {books.map((book) => (
-        <>
-        <p key={book.id}>{book.title}</p> 
-        <button onClick={() => handleDelete(book.id)}>Delete</button>
-        </>
-      ))}
-    </div>
-  );
-};
+}
 
 export default BookGrid;
