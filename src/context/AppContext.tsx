@@ -2,18 +2,18 @@ import { UserCredential } from "firebase/auth"
 import { createContext, useContext, useState } from "react"
 
 interface AppContextType {
-    user: UserCredential | undefined;
-    setUser: React.Dispatch<React.SetStateAction<UserCredential | undefined>>;
+    curUser: UserCredential | undefined;
+    setCurUser: React.Dispatch<React.SetStateAction<UserCredential | undefined>>;
 } 
 interface Props {
     children: JSX.Element;
 }
-const Context = createContext<AppContextType>({user: undefined, setUser: () => {}});
+const Context = createContext<AppContextType>({curUser: undefined, setCurUser: () => {}});
 const AppProvider = ({children}:Props) => {
-    const [user, setUser] = useState<UserCredential | undefined>(undefined);
+    const [curUser, setCurUser] = useState<UserCredential | undefined>(undefined);
 
   return (
-    <Context.Provider value={{user,setUser}}>{children}</Context.Provider>
+    <Context.Provider value={{curUser,setCurUser}}>{children}</Context.Provider>
   )
 }
 export const useAppContext = () => {

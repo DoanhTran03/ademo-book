@@ -1,8 +1,16 @@
 import { AiOutlineUser } from "react-icons/ai";
 import useAuth from "../../../hooks/useAuth";
 import { useEffect, useRef } from "react";
+import { useAppContext } from "../../../context/AppContext";
+import { useNavigate } from "react-router-dom";
 const LoginForm = () => {
   const { user, signIn, signUp, signOut } = useAuth();
+  const { setCurUser } = useAppContext();
+  const navigate = useNavigate();
+  useEffect(() => {
+    setCurUser(user);
+    if (user !== undefined) navigate('/home')
+  }, [user]);
   const usernameRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const signInHandle = () => {

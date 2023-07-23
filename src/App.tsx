@@ -1,11 +1,16 @@
-import './App.css'
-import Login from './pages/Login'
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+import Router from "./pages/Router";
+import AppProvider from "./context/AppContext";
 
 function App() {
-
   return (
-    <Login></Login>
-  )
+    <AppProvider>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </AppProvider>
+  );
 }
 
-export default App
+export default App;

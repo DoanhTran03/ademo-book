@@ -5,7 +5,7 @@ import pageData from './pageData'
 const Router = () => {
   return (
     <Routes>
-        {pageData.map(page => <Route path={page.path} element={<page.element/>}></Route>)}
+        {pageData.map(page => <Route key={page.title} path={page.path} element={<page.element/>}></Route>)}
     </Routes>
   )
 }
