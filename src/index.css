@@ -1,0 +1,13 @@
+/*Global style*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display&display=swap');
+:root {
+    --primary-clr-1: #81302C;
+    --primary-clr-2: #CCCCD9;
+    --primary-clr-3: #44514B;
+    --primary-clr-4: #151418;
+    --primary-clr-5: #1C2F5C;
+}   
+*,::before,::after {
+    margin: 0;
+    box-sizing: border-box;
+}
