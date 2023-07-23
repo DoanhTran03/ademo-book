@@ -19,6 +19,12 @@
     object-fit: cover;
 }
 .login__header {
+    letter-spacing: 4px;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: fixed;
+    left: 38%;
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,13 +36,25 @@
     height: 0;
     margin: 25px 0;
     width: 4px;
-    background-color: #151418;
+    background-color: #fff;
 }
 .login__header .icon {
     display: grid;
     place-items: center;
     font-size: 8rem ;
-    color: var(--primary-clr-3);
+    color: #fff;
+}
+@media screen and (min-width: 900px) and (max-width: 1120px) {
+.login__header {
+    transform: translateY(-50%);
+    left: 5%;
+    letter-spacing: 2px;
+}
+}
+@media screen and (max-width: 900px) {
+.login__header {
+    display: none;
+}
 }
 /*----LoginForm----*/
 .loginForm {
@@ -68,8 +86,8 @@
     margin-bottom: 0.5rem;
 }
 .loginForm input {  
+    color: #ccc;
     border: 0;
-    background-color: var();
     padding: 5px 10px;
     margin-bottom: 1.2rem;
     border-radius: 5px;
@@ -96,9 +114,14 @@
 .loginForm .sUBtn:hover {
     color: #81302c;
 }
-@media screen and (max-width: 400px) {
-    .loginForm {
-        right: 50%;
-        transform: translateX(50%) translateY(50%);
-    }
+@media screen and (max-width: 900px) {
+.loginForm {
+    width: 60vw;
+    height: 60vh;
+    right: 50%;
+    transform: translateX(50%) translateY(50%);
+}
+.loginForm .icon {
+    margin-bottom: 6rem;
+}
 }
