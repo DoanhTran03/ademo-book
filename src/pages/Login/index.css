@@ -9,6 +9,9 @@
 .login {
     text-transform: capitalize;
 }
+.login .slogan {
+    text-transform: none;
+}
 .video {
     z-index: -1;
     position: fixed;
@@ -19,7 +22,8 @@
     object-fit: cover;
 }
 .login__header {
-    letter-spacing: 4px;
+    text-transform: none;
+    letter-spacing: 3px;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     position: fixed;
@@ -49,6 +53,7 @@
     font-size: 8rem ;
     color: #fff;
 }
+
 @media screen and (min-width: 900px) and (max-width: 1120px) {
 .login__header {
     transform: translateY(-50%);
