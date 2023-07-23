@@ -1,13 +1,36 @@
 /*Global style*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display&display=swap");
 :root {
-    --primary-clr-1: #81302C;
-    --primary-clr-2: #CCCCD9;
-    --primary-clr-3: #44514B;
-    --primary-clr-4: #151418;
-    --primary-clr-5: #1C2F5C;
-}   
-*,::before,::after {
-    margin: 0;
-    box-sizing: border-box;
+  --primary-clr-1: #81302c;
+  --primary-clr-2: #ccccd9;
+  --primary-clr-3: #44514b;
+  --primary-clr-4: #151418;
+  --primary-clr-5: #1c2f5c;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+/*----Typography----*/
+html {
+  font-size: 62.5%;
+}
+body {
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-family: "Playfair Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 700;
 }
