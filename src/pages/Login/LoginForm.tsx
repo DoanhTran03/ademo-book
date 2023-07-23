@@ -7,7 +7,11 @@ const LoginForm = () => {
         <label htmlFor="username">username</label>
         <input id="username" type="text"  placeholder='eg. example@gmail.com'/>
         <label htmlFor="password">password</label>
-        <input id='password' type="text" />
+        <input id='password' type="text" placeholder="password..."/>
+        <div className="buttons">
+            <button className="sIBtn">signIn</button>
+            <button className="sUBtn">signUp</button>
+        </div>
     </form>
   )
 }

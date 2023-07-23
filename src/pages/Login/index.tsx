@@ -4,9 +4,9 @@ import "./index.css"
 const Login = () => {
   return (
     <div className="login">
-      {/* <video className="video" autoPlay loop muted>
+      <video className="video" autoPlay loop muted>
         <source src={video}/>
-      </video> */}
+      </video>
       <LoginForm></LoginForm>
     </div>
   )

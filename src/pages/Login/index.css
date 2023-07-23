@@ -10,6 +10,7 @@
     text-transform: capitalize;
 }
 .video {
+    z-index: -1;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -18,22 +19,29 @@
     object-fit: cover;
 }
 .loginForm {
-    right: 15%;
+    color: var(--primary-clr-3);
+    background-image: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    padding: 3rem 5.5rem;
+    right: 8%;
     bottom: 50%;
     transform: translateY(50%);
     position: fixed;
-    max-width: 300px;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
 }
 .loginForm h1 {
+    font-weight: 500;
     margin-bottom: 1rem ;
 }
 .loginForm .icon {
+    color: var(--primary-clr-1);
     padding: 0 12px;
     margin: 0 auto;
     width: fit-content;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 100%;
     font-size: 5rem ;
     margin-bottom: 0.5rem;
@@ -44,4 +52,32 @@
     padding: 5px 10px;
     margin-bottom: 1.2rem;
     border-radius: 5px;
+}
+.loginForm .buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.loginForm button {
+    cursor: pointer;
+    border: 0;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    color: var(--primary-clr-3);
+    border-radius: 2rem;
+}
+.loginForm .sIBtn {
+    background-color: var(--primary-clr-5);
+    color: var(--primary-clr-2);
+}
+.loginForm .sIBtn:hover {
+    color: #fff;
+}
+.loginForm .sUBtn:hover {
+    color: #81302c;
+}
+@media screen and (max-width: 400px) {
+    .loginForm {
+        right: 50%;
+        transform: translateX(50%) translateY(50%);
+    }
 }
