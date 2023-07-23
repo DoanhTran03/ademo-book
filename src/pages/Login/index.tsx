@@ -1,9 +1,11 @@
-import React from 'react'
-
+import video from "../../assets/pexels-cottonbro-studio-4860897-1366x720-25fps.mp4"
 const Login = () => {
   return (
-    <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, officiis.</p>
-    <h1>Lorem ipsum dolor sit amet.</h1></div>
+    <div className="login">
+      <video className="video" autoPlay loop muted>
+        <source src={video}/>
+      </video>
+    </div>
   )
 }
 
