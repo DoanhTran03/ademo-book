@@ -12,7 +12,7 @@ const LoginForm = () => {
     if (usernameRef.current && passwordRef.current) signUp(usernameRef.current.value,passwordRef.current?.value);
   }
   return (
-    <form className='loginForm'>
+    <form onSubmit={(e) => e.preventDefault()} className='loginForm'>
         <h1>user login</h1>
         <span className="icon"><AiOutlineUser/></span>
         <label htmlFor="username">username</label>
