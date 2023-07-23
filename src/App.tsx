@@ -6,13 +6,13 @@ import './App.css'
 import New from './components/New'
 import { BrowserRouter } from 'react-router-dom'
 import Router from './pages/Router'
+import LoginForm from './pages/Home/LoginForm'
+import Login from './pages/Login'
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <Router/>
-    </BrowserRouter>
+    <Login></Login>
   )
 }
 

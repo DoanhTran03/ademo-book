@@ -1,0 +1,47 @@
+:root {
+    --primary-clr-1: #81302c;
+    --primary-clr-2: #ccccd9;
+    --primary-clr-3: #44514b;
+    --primary-clr-4: #151418;
+    --primary-clr-5: #1c2f5c;
+}
+/*----Login---*/
+.login {
+    text-transform: capitalize;
+}
+.video {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.loginForm {
+    right: 15%;
+    bottom: 50%;
+    transform: translateY(50%);
+    position: fixed;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.loginForm h1 {
+    margin-bottom: 1rem ;
+}
+.loginForm .icon {
+    padding: 0 12px;
+    margin: 0 auto;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    font-size: 5rem ;
+    margin-bottom: 0.5rem;
+}
+.loginForm input {  
+    border: 0;
+    background-color: var();
+    padding: 5px 10px;
+    margin-bottom: 1.2rem;
+    border-radius: 5px;
+}
