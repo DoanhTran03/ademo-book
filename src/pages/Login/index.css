@@ -29,6 +29,11 @@
     flex-direction: column;
     align-items: center;
 }
+.login .name {
+    letter-spacing: 2px;
+    color: #fff;
+    display: none;
+}
 .login__header h1{
     font-size: 6rem;
 }
@@ -52,6 +57,9 @@
 }
 }
 @media screen and (max-width: 900px) {
+.login .name {
+    display: block;
+}
 .login__header {
     display: none;
 }
@@ -86,7 +94,7 @@
     margin-bottom: 0.5rem;
 }
 .loginForm input {  
-    color: #ccc;
+    color: #151418;
     border: 0;
     padding: 5px 10px;
     margin-bottom: 1.2rem;
@@ -122,6 +130,15 @@
     transform: translateX(50%) translateY(50%);
 }
 .loginForm .icon {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
+}
+@media screen and (max-width: 510px) {
+    .loginForm {
+        width: 100vw;
+        padding: 10px 10px;
+    }
+    .loginForm h1 {
+        font-size: 2rem;
+    }
 }

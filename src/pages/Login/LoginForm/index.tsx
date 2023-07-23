@@ -1,16 +1,27 @@
 import {AiOutlineUser} from "react-icons/ai"
+import useAuth from "../../../hooks/useAuth"
+import { useRef } from "react";
 const LoginForm = () => {
+  const {user, signIn, signUp, signOut} = useAuth();
+  const usernameRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
+  const signInHandle = () => {
+    if (usernameRef.current && passwordRef.current) {signIn(usernameRef.current.value,passwordRef.current?.value)}
+  }
+  const signUpHandle = () => {
+    if (usernameRef.current && passwordRef.current) signUp(usernameRef.current.value,passwordRef.current?.value);
+  }
   return (
     <form className='loginForm'>
         <h1>user login</h1>
         <span className="icon"><AiOutlineUser/></span>
         <label htmlFor="username">username</label>
-        <input id="username" type="text"  placeholder='eg. example@gmail.com'/>
+        <input ref={usernameRef} id="username" type="text"  placeholder='eg. example@gmail.com'/>
         <label htmlFor="password">password</label>
-        <input id='password' type="text" placeholder="password..."/>
+        <input ref={passwordRef} id='password' type="password" placeholder="password..."/>
         <div className="buttons">
-            <button className="sIBtn">signIn</button>
-            <button className="sUBtn">signUp</button>
+            <button className="sIBtn" onClick={() => signInHandle()}>signIn</button>
+            <button className="sUBtn" onClick={() => signUpHandle()}>signUp</button>
         </div>
     </form>
   )

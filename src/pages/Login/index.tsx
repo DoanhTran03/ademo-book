@@ -8,6 +8,7 @@ const Login = () => {
   window.addEventListener('load',animate);
   return (
     <div className="login">
+      <h1 className="name">Ademo Book.</h1>
       <video className="video" autoPlay loop muted>
         <source src={video}/>
       </video>
