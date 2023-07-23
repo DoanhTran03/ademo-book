@@ -1,0 +1,131 @@
+:root {
+  --primary-clr-1: #81302c;
+  --primary-clr-2: #ccccd9;
+  --primary-clr-3: #44514b;
+  --primary-clr-4: #151418;
+  --primary-clr-5: #1c2f5c;
+}
+/*Nav Bar*/
+.nav-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 1rem 0;
+    width: 100vw;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    box-shadow: 0 0 10px 2px #ccc;
+}
+.nav-bar__heading .icon {
+    display: none;
+}
+.nav-bar h1 {
+    margin-left: 1.5rem;
+    color: var(--primary-clr-3);
+    letter-spacing: 3px;
+}
+.nav-bar__links {
+    flex: 1;
+    justify-content: space-evenly;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.nav-bar__links a {
+    color: var(--primary-clr-5);
+    display: flex;
+    flex-direction: center;
+    text-decoration: none;
+}
+.nav-bar__links .icon {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+    color: var(--primary-clr-5);
+    display: grid;
+    place-items: center;
+}
+.nav-bar button {
+    margin-right: 1rem;
+    cursor: pointer;
+    background-color: var(--primary-clr-5);
+    color: #ddd;
+    letter-spacing: 2px;
+    font-size: 1.7rem;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 10px;
+}
+.nav-bar button:hover {
+    color: #fff;
+}
+.nav-bar__links a:hover {
+    color: var(--primary-clr-1);
+}
+.cross-icon {
+    display: none;
+    place-items: center;
+    color: #1c2f5c;
+    position: fixed;
+    top: 3%;
+    left: 3%;
+    font-size: 5rem;
+}
+@media screen and (min-width: 850px) and (max-width: 1000px) {
+.nav-bar {
+    font-size: 80%;
+}
+.nav-bar button {
+    font-size: 80%;
+}
+}
+/*On Mobile*/
+@media screen and (max-width: 850px) {
+.nav-bar {
+    background-color: #fff;
+    overflow: hidden;
+    min-height: 100vh;
+    border-radius: 5px;
+    max-width: 320px;
+    flex-direction: column;
+}
+.nav-bar__heading {
+    margin-bottom: 6rem;
+    gap: 4rem;
+    display: flex;
+    flex-direction: row;
+}
+.nav-bar__heading .icon {
+    color: var(--primary-clr-1);
+    margin-right: 1rem;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 4rem;
+}
+.nav-bar__links {
+    justify-content: flex-start;
+    padding-left: 1rem;
+    gap: 4rem;
+    width: 100%;
+    text-align: start;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+.cross-icon {
+    display: grid;
+    place-items: center;
+    color: #1c2f5c;
+    position: fixed;
+    top: 3%;
+    left: 3%;
+    font-size: 5rem;
+    transform: rotate(0deg);
+    transition: all 0.5s ease;
+}
+.cross-icon:hover {
+    transform: rotate(90deg);
+}
+}
+

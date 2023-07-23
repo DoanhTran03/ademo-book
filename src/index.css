@@ -7,6 +7,10 @@
   --primary-clr-4: #151418;
   --primary-clr-5: #1c2f5c;
 }
+#root {
+  margin: 0;
+  width: 100vw;
+}
 *,
 ::before,
 ::after {
