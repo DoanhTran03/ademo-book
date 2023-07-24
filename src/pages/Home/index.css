@@ -247,3 +247,23 @@
     top: 50%;
     transform: translateY(-50%);
 }
+/*----BookCard----*/
+.bookCard {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bookCard img {
+    width: 120px;
+    object-fit: cover;
+    margin-bottom: 3rem;
+}
+.bookCard__author {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
