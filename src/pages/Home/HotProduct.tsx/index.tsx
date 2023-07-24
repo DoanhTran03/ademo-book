@@ -1,5 +1,6 @@
 import "../index.css"
 import AutoSlider from "./AutoSlider"
+
 const HotProduct = () => {
   return (
     <div className="hotProduct">

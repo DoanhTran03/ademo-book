@@ -5,12 +5,18 @@
   --primary-clr-4: #151418;
   --primary-clr-5: #1c2f5c;
 }
+/*Container*/
+.hotProduct-container {
+    display: grid;
+    place-items: center;
+    height: 90vh;
+}
 /*Nav Bar*/
 .nav-bar {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 1rem 0;
     width: 100vw;
     display: flex;
@@ -206,6 +212,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
 }
 .hotProduct__heading .left-line{
     margin-right: 15px;
@@ -218,6 +225,14 @@
     width: 250px;
     height: 0.1px;
     background-color: #14203E;
+}
+@media screen and (max-width: 700px) {
+    .hotProduct__heading .left-line {
+        width: 100px;
+    }
+    .hotProduct__heading .right-line {
+        width: 100px;
+    }
 }
 /*-----AutoSlider-----*/
 .autoSlider {
@@ -295,4 +310,9 @@
 }
 .bookCard__description {
     font-size: 1.5rem;
+}
+@media screen and (max-width: 425px) {
+    .bookCard__description {
+        font-size: 1.2rem;
+    }
 }

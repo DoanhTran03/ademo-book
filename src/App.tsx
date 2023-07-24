@@ -15,7 +15,7 @@ function App() {
     //     <Router />
     //   </BrowserRouter>
     // </AppProvider>
-    <AutoSlider></AutoSlider>
+    <Home></Home>
   );
 }
 
