@@ -1,4 +1,5 @@
 import "../index.css"
+import AutoSlider from "./AutoSlider"
 const HotProduct = () => {
   return (
     <div className="hotProduct">
@@ -7,6 +8,7 @@ const HotProduct = () => {
             <p>Recommended books</p>
           <div className="right-line"></div>
         </div>
+        <AutoSlider></AutoSlider>
     </div>
   )
 }
