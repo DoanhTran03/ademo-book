@@ -136,7 +136,8 @@
 
 /*----Hero----*/
 .hero {
-    height: 60vh;
+    background-color: #FFFCF8;
+    height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -147,7 +148,9 @@
     align-items: center;
 }
 .hero__content {
-    max-width: 70vw;
+    padding-top: 10rem;
+    line-height: 1.2;
+    max-width: 40vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,21 +158,40 @@
     text-align: center;
 }
 .hero__content h1 {
-    color: var(--primary-clr-1);
-    font-size: 3rem;
-    letter-spacing: 0.5rem;
+    color: #14203E;
+    font-size: 4rem;
     margin-bottom: 3rem;
 }
 .hero__content p {
-    color: var(--primary-clr-3);
+    color: #14203E;
 }
 .hero button {
     letter-spacing: 2px;
     cursor: pointer;
-    background-color: var(--primary-clr-2);
-    font-size: 2rem;
-    padding: 5px 10px;
+    background-color: #14203E;
+    font-size: 1rem;
+    padding: 20px 10px;
     border: none;
     border-radius: 5px;
-    color: var(--primary-clr-5);
+    color: #ccc;
+    margin-bottom: 5rem;
+}
+.hero button:hover {
+    color: #fff;
+}
+@media screen and (min-width:768px) and (max-width: 1024px) {
+    .hero__content {
+        max-width: 70vw;
+    }
+}
+@media screen and (max-width: 768px) {
+.hero__content {
+    max-width: 90vw;
+}
+.hero__content h1 {
+    font-size: 3rem;
+}
+.hero__content p {
+    font-size: 2rem;
+}
 }

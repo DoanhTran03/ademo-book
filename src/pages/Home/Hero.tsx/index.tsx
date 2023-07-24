@@ -1,4 +1,3 @@
-import treeImg from "../../../assets/—Pngtree—cartoon trees library bookshelf_5304262.webp";
 import "../index.css";
 const Hero = () => {
   return (
