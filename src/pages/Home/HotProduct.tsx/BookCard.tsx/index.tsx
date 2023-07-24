@@ -5,7 +5,7 @@ interface Props {
 }
 const BookCard = ({book, position}: Props) => {
   return (
-    <article className="bookCard">
+    <article className={"bookCard bookCard--" + position}>
       <img src={book.cover}></img>
       <h3>{book.name}</h3>
       <p className="bookCard__author">{book.author}</p>

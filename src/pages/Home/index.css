@@ -221,15 +221,18 @@
 }
 /*-----AutoSlider-----*/
 .autoSlider {
+    border-radius: 10px;
+    overflow: hidden;
     position: relative;
-    background-color: yellow;
+    box-shadow: 0 0 20px 3px #ccc;
     text-align: center;
     margin: 0 auto;
     width: 95vw;
     max-width: 600px;
-    height: 350px;
+    height: 400px;
 }
 .autoSlider .back-icon {
+    z-index: 10;
     cursor: pointer;
     color: #14203E;
     font-size: 3rem;
@@ -238,7 +241,11 @@
     top: 50%;
     transform: translateY(-50%);
 }
+.autoSlider .back-icon:hover {
+    color: lightskyblue;
+}
 .autoSlider .next-icon {
+    z-index: 10;
     cursor: pointer;
     color: #14203E;
     font-size: 3rem;
@@ -247,8 +254,12 @@
     top: 50%;
     transform: translateY(-50%);
 }
+.autoSlider .next-icon:hover {
+    color: lightskyblue;
+}
 /*----BookCard----*/
 .bookCard {
+    transition: all 0.6s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -260,6 +271,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.bookCard--cur {
+    transform: translateX(0);
+}
+.bookCard--next {
+    transform: translateX(100%);
+}
+.bookCard--last {
+    transform: translateX(-100%);
 }
 .bookCard img {
     height: 150px;
