@@ -276,9 +276,11 @@
     transform: translateX(0);
 }
 .bookCard--next {
+    visibility: hidden;
     transform: translateX(100%);
 }
 .bookCard--last {
+    visibility: hidden;
     transform: translateX(-100%);
 }
 .bookCard img {
