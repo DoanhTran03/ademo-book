@@ -3,6 +3,7 @@ import Router from "./pages/Router";
 import AppProvider from "./context/AppContext";
 import NavBar from "./pages/Home/NavBar.tsx";
 import Hero from "./pages/Home/Hero.tsx/index.tsx";
+import Home from "./pages/Home/index.tsx";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
     //     <Router />
     //   </BrowserRouter>
     // </AppProvider>
-    <Hero></Hero>
+    <Home></Home>
   );
 }
 

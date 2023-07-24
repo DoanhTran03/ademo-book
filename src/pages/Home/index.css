@@ -34,7 +34,7 @@
     flex-direction: row;
 }
 .nav-bar__links a {
-    color: var(--primary-clr-5);
+    color: #14203E;
     display: flex;
     flex-direction: center;
     text-decoration: none;
@@ -49,8 +49,8 @@
 .nav-bar button {
     margin-right: 1rem;
     cursor: pointer;
-    background-color: var(--primary-clr-5);
-    color: #ddd;
+    background-color: #F6F0E8;
+    color: #000;
     letter-spacing: 2px;
     font-size: 1.7rem;
     padding: 10px 20px;

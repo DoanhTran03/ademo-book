@@ -1,7 +1,12 @@
+import Hero from "./Hero.tsx/index.tsx"
+import NavBar from "./NavBar.tsx"
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className="">
+      <NavBar></NavBar>
+      <Hero></Hero>
+    </div>
   )
 }
 
