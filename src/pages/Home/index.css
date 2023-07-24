@@ -249,6 +249,9 @@
 }
 /*----BookCard----*/
 .bookCard {
+    position: absolute;
+    top: 0;
+    left: 0;
     text-align: center;
     padding: 20px;
     width: 100%;
@@ -259,11 +262,15 @@
     align-items: center;
 }
 .bookCard img {
+    height: 150px;
     width: 120px;
     object-fit: cover;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 .bookCard__author {
     font-size: 1.6rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+}
+.bookCard__description {
+    font-size: 1.5rem;
 }

@@ -6,6 +6,7 @@ import Hero from "./pages/Home/Hero.tsx/index.tsx";
 import Home from "./pages/Home/index.tsx";
 import HotProduct from "./pages/Home/HotProduct.tsx/index.tsx";
 import BookCard from "./pages/Home/HotProduct.tsx/BookCard.tsx/index.tsx";
+import AutoSlider from "./pages/Home/HotProduct.tsx/AutoSlider/index.tsx";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
     //     <Router />
     //   </BrowserRouter>
     // </AppProvider>
-    <BookCard></BookCard>
+    <AutoSlider></AutoSlider>
   );
 }
 
