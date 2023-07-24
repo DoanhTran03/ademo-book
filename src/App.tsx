@@ -4,6 +4,7 @@ import AppProvider from "./context/AppContext";
 import NavBar from "./pages/Home/NavBar.tsx";
 import Hero from "./pages/Home/Hero.tsx/index.tsx";
 import Home from "./pages/Home/index.tsx";
+import HotProduct from "./pages/Home/HotProduct.tsx/index.tsx";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
     //     <Router />
     //   </BrowserRouter>
     // </AppProvider>
-    <Home></Home>
+    <HotProduct></HotProduct>
   );
 }
 

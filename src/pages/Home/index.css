@@ -185,6 +185,9 @@
     }
 }
 @media screen and (max-width: 768px) {
+.hero {
+    height: 100vh;
+}
 .hero__content {
     max-width: 90vw;
 }
@@ -194,4 +197,25 @@
 .hero__content p {
     font-size: 2rem;
 }
+}
+/*----Hot Product----*/
+.hotProduct__heading {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.hotProduct__heading .left-line{
+    margin-right: 15px;
+    width: 250px;
+    height: 0.1px;
+    background-color: #14203E;
+}
+.hotProduct__heading .right-line{
+    margin-left: 15px;
+    width: 250px;
+    height: 0.1px;
+    background-color: #14203E;
 }
