@@ -64,6 +64,7 @@
     color: var(--primary-clr-1);
 }
 .cross-icon {
+    cursor: pointer;
     display: none;
     place-items: center;
     color: #1c2f5c;
@@ -83,6 +84,7 @@
 /*On Mobile*/
 @media screen and (max-width: 850px) {
 .nav-bar {
+    transition: all 1s ease;
     background-color: #fff;
     overflow: hidden;
     min-height: 100vh;
@@ -90,13 +92,16 @@
     max-width: 320px;
     flex-direction: column;
 }
+.nav-bar--collapsed {
+    width: 0;
+}
 .nav-bar__heading {
     margin-bottom: 6rem;
     gap: 4rem;
     display: flex;
     flex-direction: row;
 }
-.nav-bar__heading .icon {
+.nav-bar__heading .icon {   
     color: var(--primary-clr-1);
     margin-right: 1rem;
     cursor: pointer;
