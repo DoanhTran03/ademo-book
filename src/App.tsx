@@ -10,12 +10,11 @@ import AutoSlider from "./pages/Home/HotProduct.tsx/AutoSlider/index.tsx";
 
 function App() {
   return (
-    // <AppProvider>
-    //   <BrowserRouter>
-    //     <Router />
-    //   </BrowserRouter>
-    // </AppProvider>
-    <Home></Home>
+    <AppProvider>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </AppProvider>
   );
 }
 

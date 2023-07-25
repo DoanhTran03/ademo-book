@@ -234,6 +234,14 @@
         width: 100px;
     }
 }
+@media screen and (max-width: 375px) {
+    .hotProduct__heading .left-line {
+        width: 50px;
+    }
+    .hotProduct__heading .right-line {
+        width: 50px;
+    }
+}
 /*-----AutoSlider-----*/
 .autoSlider {
     border-radius: 10px;
