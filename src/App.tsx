@@ -8,6 +8,7 @@ import HotProduct from "./pages/Home/HotProduct.tsx/index.tsx";
 import BookCard from "./pages/Home/HotProduct.tsx/BookCard.tsx/index.tsx";
 import AutoSlider from "./pages/Home/HotProduct.tsx/AutoSlider/index.tsx";
 import New from "./components/New.tsx";
+import BookGrid from "./components/BookGrid.tsx";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
     //     <Router />
     //   </BrowserRouter>
     // </AppProvider>
-    <New></New>
+    <BookGrid></BookGrid>
   );
 }
 
