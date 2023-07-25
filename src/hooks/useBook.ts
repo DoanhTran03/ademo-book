@@ -33,4 +33,3 @@ const useBook = () => {
 
 }
 
-export default BookGrid;

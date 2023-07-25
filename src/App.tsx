@@ -7,14 +7,16 @@ import Home from "./pages/Home/index.tsx";
 import HotProduct from "./pages/Home/HotProduct.tsx/index.tsx";
 import BookCard from "./pages/Home/HotProduct.tsx/BookCard.tsx/index.tsx";
 import AutoSlider from "./pages/Home/HotProduct.tsx/AutoSlider/index.tsx";
+import New from "./components/New.tsx";
 
 function App() {
   return (
-    <AppProvider>
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
-    </AppProvider>
+    // <AppProvider>
+    //   <BrowserRouter>
+    //     <Router />
+    //   </BrowserRouter>
+    // </AppProvider>
+    <New></New>
   );
 }
 
