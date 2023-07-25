@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import {doc, deleteDoc, collection, getDocs } from "firebase/firestore";
-import { db } from "../config/firebase";
 import useBook, { Book } from "../hooks/useBook";
 
 

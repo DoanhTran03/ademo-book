@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useState } from "react";
 import { db, storage } from "../config/firebase";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp, doc, updateDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 
 const New = () => {
@@ -79,6 +79,19 @@ const New = () => {
     }
   };
 
+  const updateBook = async (id: string) => {
+    if (titleRef.current && authorRef.current && descriptionRef.current) {
+      const oldBookRef = doc(db, "books", id)
+      await updateDoc(oldBookRef, {
+        title: titleRef.current.value,
+        author: authorRef.current.value,
+        description: descriptionRef.current.value,
+        timeStamp: serverTimestamp(),
+        bookURL: bookURL,
+      });
+    }
+  }
+
   return (
     <>
       <p>Upload new Book</p>
@@ -92,6 +105,7 @@ const New = () => {
       <label>Description</label>
       <input ref={descriptionRef} type="text" />
       <button disabled={perLoadImg==null || perLoadImg < 100 || titleRef.current==null} onClick={() => {addNewBook(), setIsSubmit(true)}}>Create New Book</button>
+      <button onClick={() => updateBook("9SjWUHeOU8LneIF1DHZg")}>Update</button>
     </>
   );
 };
