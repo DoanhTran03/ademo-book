@@ -8,10 +8,10 @@ import HotProduct from "./pages/Home/HotProduct.tsx/index.tsx";
 import BookCard from "./pages/Home/HotProduct.tsx/BookCard.tsx/index.tsx";
 import AutoSlider from "./pages/Home/HotProduct.tsx/AutoSlider/index.tsx";
 import New from "./components/New.tsx";
-import BookGrid from "./components/BookGrid.tsx";
 import Inventory from "./pages/Inventory/index.tsx";
 import ManageArea from "./pages/Inventory/ManageArea/index.tsx";
 import "./pages/Inventory/index.css"
+import BookGrid from "./pages/Inventory/BookGrid/index.tsx";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
     //     <Router />
     //   </BrowserRouter>
     // </AppProvider>
-    <Inventory></Inventory>
+    <BookGrid></BookGrid>
   );
 }
 
