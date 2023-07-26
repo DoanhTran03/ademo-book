@@ -1,12 +1,22 @@
 import { useEffect, useState } from "react";
-import {doc, deleteDoc, collection, getDocs } from "firebase/firestore";
+import {doc, deleteDoc, collection, getDocs, addDoc, FieldValue } from "firebase/firestore";
 import { db } from "../config/firebase";
 
 export interface Book {
-  id: string;
+  id: string
   title: string;
   author: string,
   description: string
+  timeStamp: FieldValue,
+  bookURL: string
+}
+
+export interface newBook {
+  title: string;
+  author: string,
+  description: string
+  timeStamp: FieldValue,
+  bookURL: string
 }
 
 const useBook = () => {
@@ -24,6 +34,10 @@ const useBook = () => {
     fetchBooks();
   }, []);
 
+  const addNewBook = async (newBook: newBook) => {
+      await addDoc(collection(db, "books"), newBook);
+  };
+
   const handleDelete = async (id: string) => {
     const oriBooks = [...books];
     try{
@@ -35,7 +49,7 @@ const useBook = () => {
         setBooks(oriBooks);
     }
   }
-  return {books, handleDelete}
+  return {books, addNewBook, handleDelete}
 }
 export default useBook;
 

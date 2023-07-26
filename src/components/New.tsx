@@ -3,8 +3,10 @@ import { useState } from "react";
 import { db, storage } from "../config/firebase";
 import { addDoc, collection, serverTimestamp, doc, updateDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import useBook, { Book, newBook } from "../hooks/useBook";
 
 const New = () => {
+  const {addNewBook} = useBook();
   const [files, setFiles] = useState<FileList | null>();
   const [bookURL, setBookURL] = useState("");
   const [perLoadImg, setPerLoadImg] = useState<number>();
@@ -67,15 +69,16 @@ const New = () => {
     }
   }, [isSubmit])
 
-  const addNewBook = async () => {
+  const addNewBookHandle = () => {
     if (titleRef.current && authorRef.current && descriptionRef.current) {
-      await addDoc(collection(db, "books"), {
+      const newBook: newBook = {
         title: titleRef.current.value,
         author: authorRef.current.value,
         description: descriptionRef.current.value,
         timeStamp: serverTimestamp(),
         bookURL: bookURL,
-      });
+      }
+      addNewBook(newBook);
     }
   };
 
@@ -104,7 +107,7 @@ const New = () => {
       <input ref={authorRef} type="text" />
       <label>Description</label>
       <input ref={descriptionRef} type="text" />
-      <button disabled={perLoadImg==null || perLoadImg < 100 || titleRef.current==null} onClick={() => {addNewBook(), setIsSubmit(true)}}>Create New Book</button>
+      <button disabled={perLoadImg==null || perLoadImg < 100 || titleRef.current==null} onClick={() => {addNewBookHandle(), setIsSubmit(true)}}>Create New Book</button>
       <button onClick={() => updateBook("9SjWUHeOU8LneIF1DHZg")}>Update</button>
     </>
   );
