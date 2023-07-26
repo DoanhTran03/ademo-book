@@ -122,6 +122,18 @@ p {
 .bookGrid__item {
     width: 100%;
 }
+@media screen and (max-width: 800px) {
+    .bookGrid {
+        gap: 3rem 5rem;
+        padding: 0 1rem;
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+}
+@media screen and (max-width: 500px) {
+    .bookGrid {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+    }
+}
 /*Book Card*/
 .bookCard {
     border-radius: 5px;
