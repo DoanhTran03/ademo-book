@@ -160,6 +160,20 @@ p {
 .bookCard__description {
     font-size: 1.5rem;
 }
+.bookCard__btn {
+    color: var(--primary-color-2);
+    cursor: pointer;
+    margin-top: 3rem;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 3px;
+    background-color: var(--secondary-color-1);
+}
+.bookCard__btn:hover {
+    background-color: lightcoral;
+    color: var(--primary-color-1)
+}
+
 @media screen and (max-width: 425px) {
     .bookCard__description {
         font-size: 1.2rem;
