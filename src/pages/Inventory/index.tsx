@@ -1,8 +1,10 @@
-import React from 'react'
-
+import ManageArea from "./ManageArea"
+import "./index.css"
 const Inventory = () => {
   return (
-    <div>Inventory</div>
+    <>
+    <ManageArea></ManageArea>
+    </>
   )
 }
 

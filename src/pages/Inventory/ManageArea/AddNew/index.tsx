@@ -1,12 +1,13 @@
 import { useEffect, useRef } from "react";
 import { useState } from "react";
-import { db, storage } from "../config/firebase";
-import { addDoc, collection, serverTimestamp, doc, updateDoc } from "firebase/firestore";
+import { serverTimestamp } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import useBook, { NewBook } from "../hooks/useBook";
+import useBook, { NewBook } from "../../../../hooks/useBook";
+import { storage } from "../../../../config/firebase";
 
-const New = () => {
-  const {addNewBook, updateBook} = useBook();
+
+const AddNew = () => {
+  const {addNewBook} = useBook();
   const [files, setFiles] = useState<FileList | null>();
   const [bookURL, setBookURL] = useState("");
   const [perLoadImg, setPerLoadImg] = useState<number>();
@@ -62,8 +63,10 @@ const New = () => {
         if (titleRef.current && authorRef.current && descriptionRef.current) {
           titleRef.current.value = "",
           authorRef.current.value= "",
-          descriptionRef.current.value = ""
+          descriptionRef.current.value = "";
+          setBookURL("");
         }
+        setIsSubmit(false);
       },500)
       return () => clearTimeout(timeout);
     }
@@ -71,7 +74,9 @@ const New = () => {
 
   const addNewBookHandle = () => {
     if (titleRef.current && authorRef.current && descriptionRef.current) {
-      const newBook: NewBook = {
+      type NewType = NewBook;
+
+      const newBook: NewType = {
         title: titleRef.current.value,
         author: authorRef.current.value,
         description: descriptionRef.current.value,
@@ -81,35 +86,34 @@ const New = () => {
       addNewBook(newBook);
     }
   };
-
-  const updateBookHandle = (id: string) => {
-    if (titleRef.current && authorRef.current && descriptionRef.current) {
-      const newUpdateBook = {
-        title: titleRef.current.value,
-        author: authorRef.current.value,
-        description: descriptionRef.current.value,
-        timeStamp: serverTimestamp(),
-        bookURL: bookURL,
-      }
-      updateBook(id,newUpdateBook);
-    }
-  }
-
   return (
-    <>
-      <p>Upload new Book</p>
-      {perLoadImg==100 ? <p>Loaded image successfully</p> : ""}
-      <label>Image</label>
-      <input type="file" onChange={(e) => setFiles(e.target.files)} />
-      <label>Book's Title</label>
-      <input ref={titleRef} type="text" />
-      <label>Book's Author</label>
-      <input ref={authorRef} type="text" />
-      <label>Description</label>
-      <input ref={descriptionRef} type="text" />
-      <button disabled={perLoadImg==null || perLoadImg < 100 || titleRef.current==null} onClick={() => {addNewBookHandle(), setIsSubmit(true)}}>Create New Book</button>
-    </>
-  );
-};
+    <div className='addNew'>
+      <h1>Upload new Book</h1>
+      <div className="addNew__content">
+        <div className="addNew__img">
+          {perLoadImg==100 ? <p>Loaded image successfully</p> : ""}
+          <label>Image</label>
+          <input type="file" onChange={(e) => setFiles(e.target.files)} />
+          {file ? <img src={bookURL ? bookURL : ""} alt="" /> : ""}
+        </div>
+        <div className="addNew__info">
+          <div className="info-item">
+            <label>Book's Title</label>
+            <input ref={titleRef} type="text" />
+          </div>
+          <div className="info-item">
+            <label>Book's Author</label>
+            <input ref={authorRef} type="text" />
+          </div>
+          <div className="info-item">
+            <label>Description</label>
+            <input ref={descriptionRef} type="text" />
+          </div>
+          <button disabled={perLoadImg==null || perLoadImg < 100 || titleRef.current==null} onClick={() => {addNewBookHandle(), setIsSubmit(true)}}>Create New Book</button>
+        </div>
+      </div>
+    </div>
+  )
+}
 
-export default New;
+export default AddNew
