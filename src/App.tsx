@@ -17,7 +17,7 @@ function App() {
     //     <Router />
     //   </BrowserRouter>
     // </AppProvider>
-    <BookGrid></BookGrid>
+    <New></New>
   );
 }
 

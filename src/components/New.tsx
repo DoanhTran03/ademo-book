@@ -3,10 +3,10 @@ import { useState } from "react";
 import { db, storage } from "../config/firebase";
 import { addDoc, collection, serverTimestamp, doc, updateDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import useBook, { Book, newBook } from "../hooks/useBook";
+import useBook, { Book, newBook} from "../hooks/useBook";
 
 const New = () => {
-  const {addNewBook} = useBook();
+  const {addNewBook, updateBook} = useBook();
   const [files, setFiles] = useState<FileList | null>();
   const [bookURL, setBookURL] = useState("");
   const [perLoadImg, setPerLoadImg] = useState<number>();
@@ -82,16 +82,16 @@ const New = () => {
     }
   };
 
-  const updateBook = async (id: string) => {
+  const updateBookHandle = (id: string) => {
     if (titleRef.current && authorRef.current && descriptionRef.current) {
-      const oldBookRef = doc(db, "books", id)
-      await updateDoc(oldBookRef, {
+      const newUpdateBook = {
         title: titleRef.current.value,
         author: authorRef.current.value,
         description: descriptionRef.current.value,
         timeStamp: serverTimestamp(),
         bookURL: bookURL,
-      });
+      }
+      updateBook(id,newUpdateBook);
     }
   }
 
@@ -108,7 +108,6 @@ const New = () => {
       <label>Description</label>
       <input ref={descriptionRef} type="text" />
       <button disabled={perLoadImg==null || perLoadImg < 100 || titleRef.current==null} onClick={() => {addNewBookHandle(), setIsSubmit(true)}}>Create New Book</button>
-      <button onClick={() => updateBook("9SjWUHeOU8LneIF1DHZg")}>Update</button>
     </>
   );
 };
