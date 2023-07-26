@@ -13,9 +13,14 @@ p {
 }
 /*Manage Area*/
 .manageArea {
-    box-shadow: 0 0 10px 2px #ccc;
+    font-size: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 8rem;
+    border-bottom: 2px dotted #ccc;
 }
 .manageArea__option {
+    background-color: transparent;
     justify-content: flex-start;
     align-items: center;
     padding: 0;
@@ -77,7 +82,7 @@ p {
 
 .addNew__info {
     padding: 0 10rem;
-    min-width: 40%;
+    min-width: 30%;
     min-height: 250px;
     height: 100%;
     justify-content: space-evenly;
@@ -90,6 +95,9 @@ p {
     margin-left: 50%;
     transform: translateX(-50%);
 }
+.info-item {
+    display: flex;
+}
 .info-item label {
     margin-right: 2rem;
 }
@@ -100,7 +108,7 @@ p {
         max-width: 0px;
     }
 }   
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
     .addNew__content {
         flex-direction: column;
         justify-items: center;
@@ -122,9 +130,9 @@ p {
 .bookGrid__item {
     width: 100%;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .bookGrid {
-        gap: 3rem 5rem;
+        gap: 2rem 3rem;
         padding: 0 1rem;
         grid-template-columns: repeat(2, minmax(250px, 1fr));
     }
@@ -146,6 +154,10 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.bookCard h3 {
+    text-transform: capitalize;
+    color: var(--primary-color-2);
 }
 .bookCard img {
     height: 200px;
