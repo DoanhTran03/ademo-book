@@ -12,12 +12,11 @@ import BookGrid from "./components/BookGrid.tsx";
 
 function App() {
   return (
-    // <AppProvider>
-    //   <BrowserRouter>
-    //     <Router />
-    //   </BrowserRouter>
-    // </AppProvider>
-    <New></New>
+    <AppProvider>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </AppProvider>
   );
 }
 

@@ -1,5 +1,7 @@
+import { Link, useNavigate } from "react-router-dom";
 import "../index.css";
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <div className="hero">
       <div className="hero__content">
@@ -10,7 +12,7 @@ const Hero = () => {
           where every page turns into an unforgettable journey.
         </p>
       </div>
-      <button>
+      <button onClick={() => navigate("/inventory")}>
         <a>Start explore.</a>
       </button>
     </div>

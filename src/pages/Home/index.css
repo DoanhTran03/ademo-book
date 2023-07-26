@@ -56,14 +56,17 @@
     margin-right: 1rem;
     cursor: pointer;
     background-color: #F6F0E8;
-    color: #000;
     letter-spacing: 2px;
     font-size: 1.7rem;
     padding: 10px 20px;
     border: 0;
     border-radius: 10px;
 }
-.nav-bar button:hover {
+.nav-bar button a {
+    color: #000;
+    text-decoration: none;
+}
+.nav-bar button:hover a{
     color: #fff;
 }
 .nav-bar__links a:hover {
@@ -176,13 +179,16 @@
     cursor: pointer;
     background-color: #14203E;
     font-size: 1rem;
-    padding: 20px 10px;
     border: none;
     border-radius: 5px;
-    color: #ccc;
     margin-bottom: 5rem;
+    padding: 20px 10px;
 }
-.hero button:hover {
+.hero button a {
+    color: #ccc;
+    text-decoration: none;  
+}
+.hero button:hover a {
     color: #fff;
 }
 @media screen and (min-width:768px) and (max-width: 1024px) {
