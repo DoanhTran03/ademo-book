@@ -11,7 +11,7 @@ export interface Book {
   bookURL: string
 }
 
-export interface newBook {
+export interface NewBook {
   title: string;
   author: string,
   description: string
@@ -20,7 +20,7 @@ export interface newBook {
 }
 
 const useBook = () => {
-  let [books, setBooks] = useState<Book[]|newBook[]>([]);
+  let [books, setBooks] = useState<Book[]|NewBook[]>([]);
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -34,7 +34,7 @@ const useBook = () => {
     fetchBooks();
   }, []);
 
-  const addNewBook = async (newBook: newBook) => {
+  const addNewBook = async (newBook: NewBook) => {
       const oriBooks = [...books];
       try {
       await addDoc(collection(db, "books"), newBook);
