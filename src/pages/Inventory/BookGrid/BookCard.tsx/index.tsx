@@ -1,10 +1,12 @@
 import { Book, NewBook } from "../../../../hooks/useBook";
+import Modal from "../Modal.tsx";
 
 interface Props {
   onDelete: (id: string) => void;
   book: Book | NewBook;
+  id: string;
 }
-const BookCard = ({book,onDelete}: Props) => {
+const BookCard = ({book,onDelete,id}: Props) => {
   return (
     <article className={"gridCard"}>
       <img src={book.bookURL}></img>
@@ -13,6 +15,7 @@ const BookCard = ({book,onDelete}: Props) => {
       <p className="gridCard__description">
         {book.description}
       </p>
+      <Modal></Modal>
       <button className="gridCard__btn" onClick={() => onDelete(book.id)}>Delete Book</button>
     </article>
   );

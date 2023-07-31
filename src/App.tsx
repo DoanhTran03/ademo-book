@@ -15,12 +15,11 @@ import Modal from "./pages/Inventory/BookGrid/Modal.tsx/index.tsx";
 
 function App() {
   return (
-    // <AppProvider>
-    //   <BrowserRouter>
-    //     <Router />
-    //   </BrowserRouter>
-    // </AppProvider>
-    <Modal></Modal>
+    <AppProvider>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </AppProvider>
   );
 }
 

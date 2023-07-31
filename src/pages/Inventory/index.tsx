@@ -1,4 +1,4 @@
-import InventoryProvider, { useInventoryContext } from "../../context/InventoryContext"
+import InventoryProvider from "../../context/InventoryContext"
 import BookGrid from "./BookGrid"
 import ManageArea from "./ManageArea"
 import "./index.css"

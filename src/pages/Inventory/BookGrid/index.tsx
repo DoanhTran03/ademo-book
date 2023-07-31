@@ -9,7 +9,7 @@ const BookGrid = () => {
     }
   return (
     <div className="bookGrid">
-        {books.map((book, index) => <BookCard key={book.id} onDelete={(id) => onDelete(id)} book={book}></BookCard>)}
+        {books.map((book, index) => <BookCard id={book.id} key={book.id} onDelete={(id) => onDelete(id)} book={book}></BookCard>)}
     </div>
   )
 }
