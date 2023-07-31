@@ -50,7 +50,9 @@ const useBook = () => {
     try {
       const oldBookRef = doc(db, "books", id)
       await updateDoc(oldBookRef, updateBook);
-      setBooks([...books,updateBook]);
+      let newBooks = books.filter(book => book.id !== id);
+      newBooks = [...newBooks, updateBook];
+      setBooks(newBooks);
     }
     catch(err) {
       setBooks(oriBooks);

@@ -15,7 +15,7 @@ const BookCard = ({book,onDelete,id}: Props) => {
       <p className="gridCard__description">
         {book.description}
       </p>
-      <Modal></Modal>
+      <Modal id={id}></Modal>
       <button className="gridCard__btn" onClick={() => onDelete(book.id)}>Delete Book</button>
     </article>
   );
