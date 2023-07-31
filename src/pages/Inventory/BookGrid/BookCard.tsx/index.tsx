@@ -8,7 +8,7 @@ const BookCard = ({book,onDelete}: Props) => {
   return (
     <article className={"bookCard"}>
       <img src={book.bookURL}></img>
-      <h3>{book.author}</h3>
+      <h3>{book.title}</h3>
       <p className="bookCard__author">{book.author}</p>
       <p className="bookCard__description">
         {book.description}

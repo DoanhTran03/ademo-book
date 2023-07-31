@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react";
 import useBook from "../../../../hooks/useBook";
+import { useInventoryContext } from "../../../../context/InventoryContext";
 
 const SortArea = () => {
-  const [type, setType] = useState("default");
+  const [type, setType] = useState<"author" | "title" | "default">("default");
   const [order, setOrder] = useState("default");
-  const { books,setBooks} = useBook();
+  const { books,setBooks} = useInventoryContext();
   
   useEffect(() => {
     let sortedBooks = [...books];
+    if (type === "default") return;
     sortedBooks.sort((a, b) => {
-      return a.author.localeCompare(b.author);
+      if (order === "ascending" || order === "default") return (a[`${type}`].localeCompare(b[`${type}`]))
+      if (order === "decending") return -(a[`${type}`].localeCompare(b[`${type}`]))
+      else return 0;
     });
     setBooks(sortedBooks);
-  }, [type]);
+  }, [order, type]);
 
   return (
     <div className="sortArea">
@@ -30,7 +34,7 @@ const SortArea = () => {
         </div>
         <div className="">
           <input
-            onClick={() => setType("by book name")}
+            onClick={() => setType("title")}
             name="type"
             id="book-name-radio"
             type="radio"
@@ -40,7 +44,7 @@ const SortArea = () => {
         </div>
         <div className="">
           <input
-            onClick={() => setType("by author name")}
+            onClick={() => setType("author")}
             name="type"
             id="author-name-radio"
             type="radio"

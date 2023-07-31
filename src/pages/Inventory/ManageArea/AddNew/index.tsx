@@ -82,7 +82,7 @@ const AddNew = () => {
         timeStamp: serverTimestamp(),
         bookURL: bookURL,
       }
-      addNewBook(newBook);
+      addNewBook(newBook);  
     }
   };
   return (
