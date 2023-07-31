@@ -15,12 +15,11 @@ import BookGrid from "./pages/Inventory/BookGrid/index.tsx";
 
 function App() {
   return (
-    // <AppProvider>
-    //   <BrowserRouter>
-    //     <Router />
-    //   </BrowserRouter>
-    // </AppProvider>
-    <Inventory></Inventory>
+    <AppProvider>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </AppProvider>
   );
 }
 

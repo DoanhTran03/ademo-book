@@ -6,14 +6,14 @@ interface Props {
 }
 const BookCard = ({book,onDelete}: Props) => {
   return (
-    <article className={"bookCard"}>
+    <article className={"gridCard"}>
       <img src={book.bookURL}></img>
       <h3>{book.title}</h3>
-      <p className="bookCard__author">{book.author}</p>
-      <p className="bookCard__description">
+      <p className="gridCard__author">{book.author}</p>
+      <p className="gridCard__description">
         {book.description}
       </p>
-      <button className="bookCard__btn" onClick={() => onDelete(book.id)}>Delete Book</button>
+      <button className="gridCard__btn" onClick={() => onDelete(book.id)}>Delete Book</button>
     </article>
   );
 };

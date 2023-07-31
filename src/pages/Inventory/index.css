@@ -5,11 +5,9 @@
 }
 h1 {
     font-size: 2.4rem;
-    color: var(--primary-color-1);
 }
 p {
     font-size: 1.6rem;
-    color: var(--primary-color-2);
 }
 /*Manage Area*/
 .manageArea {
@@ -143,7 +141,7 @@ p {
     }
 }
 /*Book Card*/
-.bookCard {
+.gridCard {
     border-radius: 5px;
     box-shadow: 0 0 15px 2px #ddd;
     text-align: center;
@@ -155,24 +153,24 @@ p {
     justify-content: center;
     align-items: center;
 }
-.bookCard h3 {
+.gridCard h3 {
     text-transform: capitalize;
     color: var(--primary-color-2);
 }
-.bookCard img {
+.gridCard img {
     height: 200px;
     width: 150px;
     object-fit: cover;
     margin-bottom: 2rem;
 }
-.bookCard__author {
+.gridCard__author {
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
 }
-.bookCard__description {
+.gridCard__description {
     font-size: 1.5rem;
 }
-.bookCard__btn {
+.gridCard__btn {
     color: var(--primary-color-2);
     cursor: pointer;
     margin-top: 3rem;
@@ -181,13 +179,13 @@ p {
     border-radius: 3px;
     background-color: var(--secondary-color-1);
 }
-.bookCard__btn:hover {
+.gridCard__btn:hover {
     background-color: lightcoral;
     color: var(--primary-color-1)
 }
 
 @media screen and (max-width: 425px) {
-    .bookCard__description {
+    .gridCard__description {
         font-size: 1.2rem;
     }
 }
