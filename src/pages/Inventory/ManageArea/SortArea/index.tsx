@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import useBook from "../../../../hooks/useBook";
 import { useInventoryContext } from "../../../../context/InventoryContext";
 
 const SortArea = () => {

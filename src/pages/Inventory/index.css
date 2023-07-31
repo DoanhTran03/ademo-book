@@ -122,6 +122,7 @@ p {
     margin: 0 auto;
     max-width: 1200px;
     display: grid;
+    margin-top: 5rem;
     gap: 5rem 7rem;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
 }
@@ -194,11 +195,25 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 2rem 0;
 }
 .sortArea h2 {
     font-weight: 600;
     margin: 1rem 0;
 }
-.sortArea .sortArea__type {
+.sortArea label {
+    margin-left: 10px;
+}
+.sortArea div {
+    margin: 10px 0;
+}
+.sortArea h2 {
+    color: var(--primary-color-1);
+    margin-bottom: 20px;
+}
+.sortArea__type {
+    flex-direction: column;
+}
+.sortArea__order {
     flex-direction: column;
 }
