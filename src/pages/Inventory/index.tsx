@@ -1,11 +1,16 @@
+import InventoryProvider, { useInventoryContext } from "../../context/InventoryContext"
 import BookGrid from "./BookGrid"
 import ManageArea from "./ManageArea"
 import "./index.css"
 const Inventory = () => {
   return (
     <>
-    <ManageArea></ManageArea>
-    <BookGrid></BookGrid>
+    <InventoryProvider>
+    <>
+      <ManageArea></ManageArea>
+      <BookGrid></BookGrid>
+    </>
+    </InventoryProvider>
     </>
   )
 }

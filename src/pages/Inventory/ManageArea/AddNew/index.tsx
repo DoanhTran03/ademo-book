@@ -4,10 +4,10 @@ import { serverTimestamp } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import useBook, { NewBook } from "../../../../hooks/useBook";
 import { storage } from "../../../../config/firebase";
-
+import { useInventoryContext } from "../../../../context/InventoryContext";
 
 const AddNew = () => {
-  const {addNewBook} = useBook();
+  const {addNewBook} = useInventoryContext(); 
   const [files, setFiles] = useState<FileList | null>();
   const [bookURL, setBookURL] = useState("");
   const [perLoadImg, setPerLoadImg] = useState<number>();
@@ -21,7 +21,6 @@ const AddNew = () => {
   useEffect(() => {
     const uploadFile = async () => {
     const name = new Date().getTime() + (file? file.name : "");
-    console.log(name);
 
     const storageRef = ref(storage, "images/" + (file? file.name : ""));
     const uploadTask = uploadBytesResumable(storageRef, (file as Blob));

@@ -1,9 +1,9 @@
+import { useInventoryContext } from '../../../context/InventoryContext.tsx';
 import useBook from '../../../hooks/useBook';
 import BookCard from './BookCard.tsx';
 
 const BookGrid = () => {
-    const {books , handleDelete} = useBook();
-    console.log(books);
+    const {books , handleDelete} = useInventoryContext();
     const onDelete = (id: string) => {
         handleDelete(id);
     }

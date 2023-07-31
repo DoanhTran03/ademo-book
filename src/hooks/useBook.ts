@@ -68,7 +68,7 @@ const useBook = () => {
         setBooks(oriBooks);
     }
   }
-  return {books, addNewBook, updateBook, handleDelete}
+  return {books,setBooks, addNewBook, updateBook, handleDelete}
 }
 export default useBook;
 
