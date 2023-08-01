@@ -22,7 +22,7 @@ function App() {
     //     <Router />
     //   </BrowserRouter>
     // </AppProvider>
-    <PersonCard></PersonCard>
+    <About></About>
   );
 }
 

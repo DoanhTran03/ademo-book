@@ -1,15 +1,20 @@
 import "../../index.css"
 import img from "../../../../assets/doanh-tran.webp"
-const index = () => {
+import { Person } from "../person"
+
+interface Props {
+  person: Person;
+}
+const PersonCard = ({person}: Props) => {
   return (
     <div className="personCard">
-      <img className="personCard__img" src={img} alt="Member of a group" />
+      <img className="personCard__img" src={person.photo} alt="Member of a group" />
       <div className="personCard__content">
-        <h2>Ngoc Doanh Tran</h2>
-        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, alias."</p>
+        <h2>{person.name}</h2>
+        <p>{`"${person.description}"`}</p>
       </div>
     </div>
   )
 }
 
-export default index
+export default PersonCard

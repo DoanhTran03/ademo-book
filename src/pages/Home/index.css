@@ -331,9 +331,24 @@
     }
 }
 /*----About----*/
-
+.about__heading {
+    text-align: center;
+    color: var(--primary-clr-5);
+    margin: 20px 0 30px 0;
+}
+.about__members {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
 /*----PersonCard----*/
 .personCard {
+    max-width: 400px;
+    border-radius: 10px;
+    padding: 0 10px;
     box-shadow: 0 0 10px 2px #ccc;
     align-items: center;
     display: flex;
@@ -346,14 +361,23 @@
     border-radius: 50%;
 }
 .personCard__content {
+    text-align: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     margin-bottom: 2rem;
 }
 .personCard__content h2 {
+    margin-top: 20px;
     color: var(--primary-clr-5);
     font-size: 2rem;
     letter-spacing: 4px;
+}
+@media screen and (max-width: 700px) {
+    .about__members {
+        margin: 0 auto;
+        max-width: 500px;
+        flex-direction: column;
+    }
 }
