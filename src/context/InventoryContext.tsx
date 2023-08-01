@@ -5,7 +5,7 @@ interface Props {
     children: JSX.Element;
 }
 interface ContextType {
-    books: Book[] | NewBook[];
+    books: any;
     addNewBook: (newBook: NewBook) => void;
     handleDelete: (id: string) => void;
     setBooks: React.Dispatch<React.SetStateAction<Book[] | NewBook[]>>;

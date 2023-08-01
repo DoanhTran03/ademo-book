@@ -31,10 +31,6 @@ const useAuth = () => {
       .catch((error) => {
         window.alert(error.message);
       });
-
-    const signOut = () => {
-        setUser(undefined);
-    }
   };
   return {user, signIn, signUp, signOut};
 };

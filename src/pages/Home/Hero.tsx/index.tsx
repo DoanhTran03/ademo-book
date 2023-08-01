@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../index.css";
 const Hero = () => {
   const navigate = useNavigate();

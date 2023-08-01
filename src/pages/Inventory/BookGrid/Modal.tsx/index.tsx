@@ -27,8 +27,7 @@ const Modal = ({id}: Props) => {
 
   useEffect(() => {
     const uploadFile = async () => {
-    const name = new Date().getTime() + (file? file.name : "");
-
+      
     const storageRef = ref(storage, "images/" + (file? file.name : ""));
     const uploadTask = uploadBytesResumable(storageRef, (file as Blob));
     

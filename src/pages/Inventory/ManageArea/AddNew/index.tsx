@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useState } from "react";
 import { serverTimestamp } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import useBook, { NewBook } from "../../../../hooks/useBook";
+import { NewBook } from "../../../../hooks/useBook";
 import { storage } from "../../../../config/firebase";
 import { useInventoryContext } from "../../../../context/InventoryContext";
 
@@ -20,8 +20,7 @@ const AddNew = () => {
   
   useEffect(() => {
     const uploadFile = async () => {
-    const name = new Date().getTime() + (file? file.name : "");
-
+      
     const storageRef = ref(storage, "images/" + (file? file.name : ""));
     const uploadTask = uploadBytesResumable(storageRef, (file as Blob));
     

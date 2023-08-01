@@ -1,8 +1,8 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import useAuth from "../hooks/useAuth";
 
 const Authentication = () => {
-  const { user, signIn, signUp, signOut } = useAuth();
+  const { user, signIn, signUp } = useAuth();
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const signUpHandle = () => {

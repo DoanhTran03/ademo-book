@@ -20,7 +20,7 @@ export interface NewBook {
 }
 
 const useBook = () => {
-  let [books, setBooks] = useState<Book[]|NewBook[]>([]);
+  let [books, setBooks] = useState<any>([]);
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -34,7 +34,7 @@ const useBook = () => {
     fetchBooks();
   }, []);
 
-  const addNewBook = async (newBook: NewBook) => {
+  const addNewBook = async (newBook: any) => {
       const oriBooks = [...books];
       try {
       await addDoc(collection(db, "books"), newBook);
@@ -50,7 +50,7 @@ const useBook = () => {
     try {
       const oldBookRef = doc(db, "books", id)
       await updateDoc(oldBookRef, updateBook);
-      let newBooks = books.filter(book => book.id !== id);
+      let newBooks = books.filter((book: { id: string; }) => book.id !== id);
       newBooks = [...newBooks, updateBook];
       setBooks(newBooks);
     }
@@ -63,7 +63,7 @@ const useBook = () => {
     const oriBooks = [...books];
     try{
         await deleteDoc(doc(db, "books", id));
-        setBooks(books.filter(book => book.id !== id))    //this error is on purpose!
+        setBooks(books.filter((book: { id: string; }) => book.id !== id))    //this error is on purpose!
     }
     catch(err) {
         alert(err);

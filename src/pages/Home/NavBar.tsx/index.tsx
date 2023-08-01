@@ -3,7 +3,7 @@ import "../index.css";
 import { FaBars } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const NavBar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const navigate = useNavigate();

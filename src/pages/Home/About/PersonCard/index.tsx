@@ -1,5 +1,4 @@
 import "../../index.css"
-import img from "../../../../assets/doanh-tran.webp"
 import { Person } from "../person"
 
 interface Props {

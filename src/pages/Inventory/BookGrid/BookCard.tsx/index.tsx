@@ -1,9 +1,8 @@
-import { Book, NewBook } from "../../../../hooks/useBook";
 import Modal from "../Modal.tsx";
 
 interface Props {
   onDelete: (id: string) => void;
-  book: Book | NewBook;
+  book: any;
   id: string;
 }
 const BookCard = ({book,onDelete,id}: Props) => {

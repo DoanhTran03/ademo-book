@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { useAppContext } from "../../../context/AppContext";
 import { useNavigate } from "react-router-dom";
 const LoginForm = () => {
-  const { user, signIn, signUp, signOut } = useAuth();
+  const { user, signIn, signUp } = useAuth();
   const { setCurUser } = useAppContext();
   const navigate = useNavigate();
   useEffect(() => {
