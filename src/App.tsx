@@ -17,12 +17,11 @@ import PersonCard from "./pages/Home/About/PersonCard/index.tsx";
 
 function App() {
   return (
-    // <AppProvider>
-    //   <BrowserRouter>
-    //     <Router />
-    //   </BrowserRouter>
-    // </AppProvider>
-    <About></About>
+    <AppProvider>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </AppProvider>
   );
 }
 

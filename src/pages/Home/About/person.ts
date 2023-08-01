@@ -12,21 +12,21 @@ export interface Person {
 const people = [
   {
     name: "Hai Nguyen",
-    major: "Computer Science - Software Engineering",
+    major: "Computer Science",
     photo: hai,
-    description: "Code wizards, conjuring digital dreams."
+    description: "Code wizards, conjuring great digital dreams."
   },
   {
     name: "Doanh Tran",
-    major: "Computer Science - Software Engineering",
+    major: "Computer Science",
     photo: doanh,
     description: "Designing the future, one pixel at a time."
   },
   {
-    name: "harry potter",
-    major: "J.K.Rowling",
+    name: "Kevin Truong",
+    major: "Computer Science",
     photo: kevin,
-    description: "Collaboration webbing greatness, together we thrive."
+    description: "Collaboration webbing, together we thrive."
     },
 ];
 export default people;

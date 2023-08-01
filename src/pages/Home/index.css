@@ -331,7 +331,12 @@
     }
 }
 /*----About----*/
+.about {
+    padding-top: 5px;
+    background-color: rgb(246, 240, 232);
+}
 .about__heading {
+    letter-spacing: 4px;
     text-align: center;
     color: var(--primary-clr-5);
     margin: 20px 0 30px 0;
@@ -349,7 +354,6 @@
     max-width: 400px;
     border-radius: 10px;
     padding: 0 10px;
-    box-shadow: 0 0 10px 2px #ccc;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -370,12 +374,22 @@
 }
 .personCard__content h2 {
     margin-top: 20px;
-    color: var(--primary-clr-5);
+    color: #E0DAB0;
     font-size: 2rem;
     letter-spacing: 4px;
 }
+.personCard__content h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--primary-clr-3);
+}
 @media screen and (max-width: 700px) {
+    .about {
+        max-height: 400px;
+        overflow: scroll;
+    }
     .about__members {
+        overflow: scroll;
         margin: 0 auto;
         max-width: 500px;
         flex-direction: column;

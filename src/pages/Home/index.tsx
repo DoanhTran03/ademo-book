@@ -1,3 +1,4 @@
+import About from "./About/index.tsx"
 import Hero from "./Hero.tsx/index.tsx"
 import AutoSlider from "./HotProduct.tsx/AutoSlider/index.tsx"
 import HotProduct from "./HotProduct.tsx/index.tsx"
@@ -11,6 +12,7 @@ const Home = () => {
       <div className="hotProduct-container">
         <HotProduct></HotProduct>
       </div>
+      <About></About>
     </div>
   )
 }
