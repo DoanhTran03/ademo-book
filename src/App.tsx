@@ -12,14 +12,17 @@ import ManageArea from "./pages/Inventory/ManageArea/index.tsx";
 import "./pages/Inventory/index.css"
 import BookGrid from "./pages/Inventory/BookGrid/index.tsx";
 import Modal from "./pages/Inventory/BookGrid/Modal.tsx/index.tsx";
+import About from "./pages/Home/About/index.tsx";
+import PersonCard from "./pages/Home/About/PersonCard/index.tsx";
 
 function App() {
   return (
-    <AppProvider>
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
-    </AppProvider>
+    // <AppProvider>
+    //   <BrowserRouter>
+    //     <Router />
+    //   </BrowserRouter>
+    // </AppProvider>
+    <PersonCard></PersonCard>
   );
 }
 

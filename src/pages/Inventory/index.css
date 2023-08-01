@@ -90,8 +90,7 @@ p {
     border-left: 1px dotted var(--primary-color-2);
 }
 .addNew__info button {
-    margin-left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
 }
 .info-item {
     display: flex;

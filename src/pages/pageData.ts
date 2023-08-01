@@ -17,6 +17,6 @@ const pageData = [
         path: "/inventory",
         element: Inventory,
         title: "inventory"
-    }
+    },
 ]
 export default pageData;
