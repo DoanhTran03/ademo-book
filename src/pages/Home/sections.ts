@@ -3,15 +3,15 @@ import { AiOutlineHome } from "react-icons/ai";
 import { BiBookAlt } from "react-icons/bi";
 const sections = [
   {
-    name: "Home",
+    name: "home",
     icon: AiOutlineHome,
   },
   {
-    name: "Hot Books",
+    name: "hot books",
     icon: BiBookAlt,
   },
   {
-    name: "About",
+    name: "about",
     icon: FcAbout,
   },
 ];

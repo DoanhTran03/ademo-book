@@ -3,7 +3,7 @@ import AutoSlider from "./AutoSlider"
 
 const HotProduct = () => {
   return (
-    <div className="hotProduct">
+    <div id="hot books" className="hotProduct">
         <div className="hotProduct__heading">
           <div className="left-line"></div>
             <p>Recommended books</p>

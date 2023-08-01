@@ -5,6 +5,9 @@
   --primary-clr-4: #151418;
   --primary-clr-5: #1c2f5c;
 }
+body {
+    scroll-behavior: smooth;
+}
 /*Container*/
 .hotProduct-container {
     display: grid;
@@ -13,10 +16,11 @@
 }
 /*Nav Bar*/
 .nav-bar {
+    z-index: 100;
     position: fixed;
     left: 0;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #fff;
     padding: 1rem 0;
     width: 100vw;
     display: flex;
@@ -374,7 +378,7 @@
 }
 .personCard__content h2 {
     margin-top: 20px;
-    color: #E0DAB0;
+    color: #ccc;
     font-size: 2rem;
     letter-spacing: 4px;
 }

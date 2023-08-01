@@ -32,7 +32,7 @@ const NavBar = () => {
         <ul className="nav-bar__links">
           {sections.map((section, index) => (
             <li key={index}>
-              <a href={section.name}>
+              <a href={`#${section.name}`}>
                 {section.name}
                 <span className="icon">
                   <section.icon />

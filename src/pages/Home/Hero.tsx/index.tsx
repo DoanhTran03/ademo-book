@@ -3,7 +3,7 @@ import "../index.css";
 const Hero = () => {
   const navigate = useNavigate();
   return (
-    <div className="hero">
+    <div id="home" className="hero">
       <div className="hero__content">
         <h1>Mordern way to make words alive.</h1>
         <p>
