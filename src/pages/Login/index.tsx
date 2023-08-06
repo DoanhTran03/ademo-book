@@ -2,9 +2,14 @@ import video from "../../assets/pexels-cottonbro-studio-4860897-1366x720-25fps.m
 import LoginForm from "./LoginForm"
 import {TbBook} from "react-icons/tb"
 import "./index.css"
+import { useEffect } from "react"
 import animate from "./animation"
 const Login = () => {
-  window.addEventListener('load',animate);
+
+  useEffect(() => {
+    animate();
+  }, [])
+
   return (
     <div className="login">
       <h1 className="name">Ademo Book.</h1>
