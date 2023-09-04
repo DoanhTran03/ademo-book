@@ -1,5 +1,5 @@
 
-# Book Inventory
+# Ademo Book
 
 Welcome to the Book Inventory project! This project showcases the development of a book inventory management system using React for the frontend, GSAP for animations, HTML and CSS for styling, and Firebase for the backend. The project also includes a presentation and a report section to provide comprehensive insights into its creation and functionality.
 
